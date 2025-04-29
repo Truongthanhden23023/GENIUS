@@ -81,6 +81,29 @@ createButton("YT", function()
 	loadstring(game:HttpGet("https://rawscripts.net/raw/Infinite-Yield_500"))()
 end)
 
+-- Hàm tạo nút
+local function createButton(text, onClick)
+	local btn = Instance.new("TextButton")
+	btn.Size = UDim2.new(1, -20, 0, 30)  -- Nút nhỏ hơn
+	btn.BackgroundColor3 = Color3.fromRGB(0, 120, 200)
+	btn.BackgroundTransparency = 0.2
+	btn.TextColor3 = Color3.fromRGB(255, 255, 255)
+	btn.Font = Enum.Font.Gotham
+	btn.TextScaled = true
+	btn.Text = text
+	btn.Parent = scroll
+
+	local btnCorner = Instance.new("UICorner", btn)
+	btnCorner.CornerRadius = UDim.new(0, 8)
+
+	btn.MouseButton1Click:Connect(onClick)
+end
+
+-- Nút thực thi script
+createButton("Super Happy Magic Forest | UGC", function()
+	loadstring(game:HttpGet(('https://pastefy.app/hJs5XmSk/raw'),true))()
+end)
+
 
 -- Nút đóng UI
 createButton("Close UI", function()
