@@ -88,7 +88,7 @@ createButton("Close UI", function()
 end)
 
 -- Nút tăng tốc
-createButton("Tăng tốc độ", function()
+createButton("speed up ", function()
 	local char = player.Character or player.CharacterAdded:Wait()
 	local hum = char:FindFirstChildOfClass("Humanoid")
 	if hum then hum.WalkSpeed = 50 end
